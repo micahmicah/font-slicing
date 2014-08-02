@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style type="text/css">
+		@font-face{
+			font-family:sliced;
+			src:url('fonts/sliced-test.otf');
+		}
+		body{
+			background:rgb(40,40,40);
+		}
+
+		h1{
+			color:rgb(210,210,210);
+			font-family:sliced;
+			font-size:250px;
+			font-weight:normal;
+			margin:0px;
+		}
+
+		h1 span{
+			position:fixed;
+		}
+
+		h1 span:after, h1 span:before{
+			position:absolute;
+		}
+
+		.half-size{
+			font-size:125px;
+		}
+
+		/*
+		------------------------------------
+		R
+		------------------------------------
+		*/
+
+		.char-01{
+			-webkit-transform:scale(1);
+			left:0.25em;
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		.char-01:before{
+			content:"4";
+			left:-1.3em;
+			top:-.25em;
+			-webkit-transform:rotate(90deg);
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		.char-01:after{
+			content:"F";
+			left:0.4em;
+			top:0.75em;
+			-webkit-text-stroke:2px rgb(200,200,200);
+			color:rgba(0,0,0,0.0);
+			-webkit-transform:rotate(90deg);
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		/*active*/
+
+		.char-01.clean{
+			-webkit-transform:scale(2);
+		}
+
+		.char-01.clean:before{
+			left:0em;
+			top:0em;
+			-webkit-transform:rotate(0deg);
+
+		}
+
+		.char-01.clean:after{
+			left:0em;
+			top:0em;
+			color:rgba(210,210,210,1.0);
+			-webkit-text-stroke:0px;
+			-webkit-transform:rotate(0deg);
+		}
+
+		/*
+		------------------------------------
+		I
+		------------------------------------
+		*/
+
+		.char-02{
+			
+		}
+
+		.char-02:before{
+			content:"8";
+			left:0.5em;
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		.char-02:after{
+			content:"K";
+			left:-0.5em;
+			top:1em;
+			color:rgba(200,200,200,0.0);
+			-webkit-text-stroke:2px rgb(200,200,200);
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+
+		.char-02.clean:before{
+			top:0em;
+			left:0em;
+		}
+
+		.char-02.clean:after{
+			top:0em;
+			left:0em;
+			-webkit-text-stroke:0px;
+			color:rgba(200,200,200,1.0);
+		}
+
+		/*
+		------------------------------------
+		S
+		------------------------------------
+		*/
+
+		.char-03{
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		.char-03:before{
+			content:"W";
+			top:-0.7em;
+			left:2em;
+			-webkit-transform:rotate(30deg);
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+
+		}
+
+		.char-03:after{
+			content:"X";
+			left:0.5em;
+			top:0.25em;
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		/*clean*/
+
+		.char-03.clean:before, .char-03.clean:after{
+			-webkit-transform:rotate(0deg);
+			left:0em;
+			top:0em;
+		}
+
+		/*
+		------------------------------------
+		D
+		------------------------------------
+		*/
+
+		.char-04{
+			bottom:-1em;
+			right:1em;
+		}
+
+		.char-04:before{
+			content:"E";
+			left:-0.5em;
+			top:0em;
+			-webkit-transform:rotate(-90deg);
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		.char-04:after{
+			content:"C";
+			left:-1em;
+			top:0.5em;
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		.char-04.clean:before, .char-04.clean:after{
+			top:0em;
+			left:0em;
+			-webkit-transform:rotate(0deg);
+		}
+
+		/*
+		------------------------------------
+		modules
+		------------------------------------
+		*/
+
+		.top{
+			top:0em;
+
+		}
+
+		.right{
+			right:0.125em;
+		}
+
+		.bottom{
+			bottom:-0.125em;
+		}
+
+		.left{
+			left:0em;
+		}
+
+		.rotate-left{
+			-webkit-transform:rotate(-90deg);
+		}
+
+		.rotate-right{
+			-webkit-transform:rotate(90deg);
+		}
+
+
+		button{
+			padding:1em 10em;
+			display:block;
+			margin:0em auto;
+			top:45%;
+			width:100%;
+			position:fixed;
+		}
+
+		h2{
+			font-family:helvetica;
+			color:white;
+			display:block;
+			width:100%;
+			position:fixed;
+			text-align:center;
+			cursor:pointer;
+		}
+
+		@media only screen and (max-width:400px){
+			h1 {
+				font-size:150px;
+			}
+
+			h2{
+				font-size:130px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1><span class="char-01 rotate-left">R</span><span class="char-02 right">I</span><span class="char-03 left bottom">S</span><span class="char-04 right bottom rotate-right">D</span></h1>
+
+	<h2>+</h2>
+<script type="text/javascript">
+	$('span').click(function(){
+		$(this).toggleClass('half-size');
+	});
+
+	$('h2').click(function(){
+		$('span').toggleClass('clean');
+	});
+
+</script>
+</body>
+</html>
