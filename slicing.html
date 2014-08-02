@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	
+	@font-face {
+    font-family: sliced;
+    src: url(fonts/sliced-test.otf);
+}
+
+	body{
+		background:rgb(40,40,40);
+	}
+
+	h1{
+		color:#fff;
+		background:rgb(0,0,0);
+		display:inline-block;
+		margin:0.25em 0em;
+		font-family:sliced;
+		font-size:300px;
+		font-weight:normal;
+		position:relative;
+		/*-webkit-transform:rotate(90deg);*/
+		-webkit-perspective:900px; /* Chrome, Safari, Opera  */
+		perspective:500px;
+		/*text-shadow:0px 0px 30px black;*/
+		/*text-outline:1px solid black;*/
+	}
+
+	h1 span:before, h1 span:after{
+		position:absolute;
+		-webkit-transition:all 0.2s ease-in;
+		-webkit-perspective:500px; /* Chrome, Safari, Opera  */
+		perspective:500px;
+		
+	}
+
+	
+	/*
+    -----------------------------------
+	 R
+	-----------------------------------*/
+	.char-01:before{
+		content:"4";
+		/*color:rgb(200,200,200);*/
+		left:0em;
+		top:0em;
+		-webkit-perspective:150px; /* Chrome, Safari, Opera  */
+		perspective:150px;
+	}
+
+	.char-01:after{
+		content:"F";
+		left:0em;
+		top:0em;
+
+		
+	}
+
+	/*R interaction */
+
+	.char-01:hover{
+		
+	}
+
+	.char-01:hover:before{
+		left:0.125em;
+		top:-0.25em;
+		
+		-webkit-transform: rotateX(-60deg);
+	}
+
+	.char-01:hover:after{
+		left:0.125em;
+		top:0.125em;
+		-webkit-transform:perspective(1200px) rotateX(-40deg) rotateY(30deg);
+	}
+
+
+	/*
+    -----------------------------------
+	 I
+	-----------------------------------*/
+	.char-02:before{
+		content:"8";
+		top:0em;
+		left:0.8125em;
+		
+	}
+
+	.char-02:after{
+		content:"K";
+		left:0.8125em;
+		top:0em;
+
+	}
+
+
+	/*I interaction*/
+	.char-02:hover:before{
+		top:-0.125em;
+		left:1em;
+		-webkit-animation:wiggle-i 1.3s ease-in-out infinite;
+	}
+
+	.char-02:hover:after{
+		top:0.125em;
+		left:1em;
+
+		-webkit-transform:rotate(10deg);
+	}
+
+	@-webkit-keyframes wiggle-i{
+		0%{
+			left:1em;
+		}
+		25%{
+			left:0.75em;
+		}
+
+		75%{
+			left:1.025em;
+		}
+
+		100%{
+			left:1em;
+
+		}
+	}
+
+
+	/*
+    -----------------------------------
+	 S
+	-----------------------------------*/
+
+	.char-03:before{
+		content:"W";
+	}
+
+	.char-03:after{
+		content:"X";
+		left:492px;
+	}
+
+	/*S interaction*/
+	.char-03:hover:before{
+		-webkit-transform:rotateY(50deg);
+	}
+
+	.char-03:hover:after{
+		-webkit-transform:rotateY(-20deg) rotateX(30deg);
+	}
+
+
+	/*
+    -----------------------------------
+	 D
+	-----------------------------------*/
+
+
+	.char-04:before{
+		content:"E";
+	}
+
+	.char-04:after{
+		content:"C";
+		left:738px;
+		top:0px;
+		
+	}
+
+	/*D interaction*/
+
+	.char-04:hover:after{
+		-webkit-animation: wiggle-d 2s ease-in-out infinite;
+	}
+
+	@-webkit-keyframes wiggle-d{
+		0%{
+			left:738px;
+		}
+
+		25%{
+			left:700px;
+		}
+
+		75%{
+			left:770px;
+		}
+
+		100%{
+			left:738px;
+		}
+
+
+	}
+
+
+
+	
+
+	</style>
+</head>
+<body>
+	<h1><span class="char-01">R</span><span class="char-02">I</span><span class="char-03">S</span><span class="char-04">D</span></h1>
+
+</body>
+</html>
