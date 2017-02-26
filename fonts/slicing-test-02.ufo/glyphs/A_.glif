@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="A" format="1">
+  <advance width="566"/>
+  <unicode hex="0041"/>
+  <outline>
+    <contour>
+      <point x="544" y="0" type="line"/>
+      <point x="544" y="628" type="line"/>
+      <point x="544" y="692"/>
+      <point x="517" y="750"/>
+      <point x="427" y="750" type="curve"/>
+      <point x="242" y="750" type="line"/>
+      <point x="242" y="626" type="line"/>
+      <point x="338" y="626" type="line"/>
+      <point x="371" y="626"/>
+      <point x="388" y="607"/>
+      <point x="388" y="574" type="curve"/>
+      <point x="388" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="22" y="0" type="line"/>
+      <point x="178" y="0" type="line"/>
+      <point x="178" y="574" type="line"/>
+      <point x="178" y="607"/>
+      <point x="195" y="626"/>
+      <point x="228" y="626" type="curve"/>
+      <point x="324" y="626" type="line"/>
+      <point x="324" y="750" type="line"/>
+      <point x="139" y="750" type="line"/>
+      <point x="49" y="750"/>
+      <point x="22" y="692"/>
+      <point x="22" y="628" type="curve"/>
+    </contour>
+    <contour>
+      <point x="431" y="395" type="line"/>
+      <point x="132" y="395" type="line"/>
+      <point x="133" y="271" type="line"/>
+      <point x="431" y="271" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>background</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>A</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>566</integer>
+        </dict>
+      </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>1.0</real>
+        <real>0.0</real>
+        <real>0.0</real>
+        <real>1.0</real>
+      </array>
+    </dict>
+  </lib>
+</glyph>

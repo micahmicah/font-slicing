@@ -1,21 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-		 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<style type="text/css">
-		@font-face{
-			font-family:sliced;
-			src:url('fonts/sliced-test.otf');
+@font-face{
+			font-family:"sliced-top";
+			src:url('../fonts/otf/slicing-test-top.otf');
 		}
+
+		@font-face{
+			font-family: "sliced-mid";
+			src:url('../fonts/otf/slicing-test-mid.otf');
+		}
+
+		@font-face{
+			font-family:"sliced-bottom";
+			src:url('../fonts/otf/slicing-test-bottom.otf');
+		}
+
 		body{
 			background:rgb(40,40,40);
 		}
 
 		h1{
 			color:rgb(210,210,210);
-			font-family:sliced;
+			font-family:"sliced-mid";
 			font-size:250px;
 			font-weight:normal;
 			margin:0px;
@@ -35,7 +39,7 @@
 
 		/*
 		------------------------------------
-		R
+		F
 		------------------------------------
 		*/
 
@@ -46,15 +50,17 @@
 		}
 
 		.char-01:before{
-			content:"4";
+			content:"F";
+			font-family:"sliced-top";
 			left:-1.3em;
-			top:-.25em;
+			top:2em;
 			-webkit-transform:rotate(90deg);
 			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
 		}
 
 		.char-01:after{
 			content:"F";
+			font-family:"sliced-bottom";
 			left:0.4em;
 			top:0.75em;
 			-webkit-text-stroke:2px rgb(200,200,200);
@@ -62,11 +68,12 @@
 			-webkit-transform:rotate(90deg);
 			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
 		}
-
-		/*active*/
+		
+			/*active*/
 
 		.char-01.clean{
 			-webkit-transform:scale(2);
+			top:0.4em;
 		}
 
 		.char-01.clean:before{
@@ -86,7 +93,7 @@
 
 		/*
 		------------------------------------
-		I
+		O
 		------------------------------------
 		*/
 
@@ -95,13 +102,15 @@
 		}
 
 		.char-02:before{
-			content:"8";
+			content:"O";
+			font-family: "sliced-top";
 			left:0.5em;
 			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
 		}
 
 		.char-02:after{
-			content:"K";
+			content:"O";
+			font-family:"sliced-bottom";
 			left:-0.5em;
 			top:1em;
 			color:rgba(200,200,200,0.0);
@@ -124,7 +133,7 @@
 
 		/*
 		------------------------------------
-		S
+		R
 		------------------------------------
 		*/
 
@@ -133,16 +142,20 @@
 		}
 
 		.char-03:before{
-			content:"W";
+			content:"R";
+			font-family:"sliced-top";
 			top:-0.7em;
 			left:2em;
 			-webkit-transform:rotate(30deg);
+			-webkit-text-stroke:2px rgb(200,200,200);
+			color:rgba(0,0,0,0.0);
 			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
 
 		}
 
 		.char-03:after{
-			content:"X";
+			content:"R";
+			font-family:"sliced-bottom";
 			left:0.5em;
 			top:0.25em;
 			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
@@ -152,13 +165,15 @@
 
 		.char-03.clean:before, .char-03.clean:after{
 			-webkit-transform:rotate(0deg);
+			-webkit-text-stroke:0px rgb(200,200,200);
+			color:rgba(210,210,210,1.0);
 			left:0em;
 			top:0em;
 		}
 
 		/*
 		------------------------------------
-		D
+		M
 		------------------------------------
 		*/
 
@@ -168,15 +183,19 @@
 		}
 
 		.char-04:before{
-			content:"E";
+			content:"M";
+			font-family:"sliced-top";
 			left:-0.5em;
 			top:0em;
+			-webkit-text-stroke:2px rgb(200,200,200);
+			color:rgba(0,0,0,0.0);
 			-webkit-transform:rotate(-90deg);
 			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
 		}
 
 		.char-04:after{
-			content:"C";
+			content:"M";
+			font-family:"sliced-bottom";
 			left:-1em;
 			top:0.5em;
 			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
@@ -186,7 +205,13 @@
 			top:0em;
 			left:0em;
 			-webkit-transform:rotate(0deg);
+			-webkit-text-stroke:0px;
+			color:rgba(200,200,200,1.0);
 		}
+		
+
+	
+
 
 		/*
 		------------------------------------
@@ -220,14 +245,14 @@
 		}
 
 
-		button{
+	/*	button{
 			padding:1em 10em;
 			display:block;
 			margin:0em auto;
 			top:45%;
 			width:100%;
 			position:fixed;
-		}
+		}*/
 
 		h2{
 			font-family:helvetica;
@@ -240,6 +265,37 @@
 			font-size:120px;
 		}
 
+		
+		.buttons{
+			padding-left:1em;
+			padding-bottom:1em;
+		}
+		
+		.description{
+			border:1px solid rgb(210,210,210);
+			max-width:30vw;
+			/*bottom:0;*/
+			position:absolute;
+			/*top:100vh;*/
+			bottom:0vh;
+			left:35vw;
+		}
+
+		.description p{
+			color:rgb(210,210,210);
+			font-family:menlo;
+			padding:1em;
+			margin:0;
+			line-height:1.3em;
+		}
+		
+		@media only screen and (max-width:800px){
+			.description{
+				max-width:100vw;
+				top:100vh;
+			}
+		}
+
 		@media only screen and (max-width:400px){
 			h1 {
 				font-size:150px;
@@ -248,22 +304,8 @@
 			h2{
 				font-size:130px;
 			}
+			.description{
+				max-width:75vw;
+				margin-left:10vw;
+			}
 		}
-	</style>
-</head>
-<body>
-	<h1><span class="char-01 rotate-left">R</span><span class="char-02 right">I</span><span class="char-03 left bottom">S</span><span class="char-04 right bottom rotate-right">D</span></h1>
-
-	<h2>+</h2>
-<script type="text/javascript">
-	$('span').click(function(){
-		$(this).toggleClass('half-size');
-	});
-
-	$('h2').click(function(){
-		$('span').toggleClass('clean');
-	});
-
-</script>
-</body>
-</html>

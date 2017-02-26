@@ -1,0 +1,76 @@
+@font-face{
+			font-family:"sliced-top";
+			src:url('../fonts/otf/slicing-test-top.otf');
+		}
+
+		@font-face{
+			font-family: "sliced-mid";
+			src:url('../fonts/otf/slicing-test-mid.otf');
+		}
+
+		@font-face{
+			font-family:"sliced-bottom";
+			src:url('../fonts/otf/slicing-test-bottom.otf');
+		}
+
+
+body{
+	background:purple;
+}
+
+h1{
+	font-family:"sliced-mid";
+	transform:rotate(10deg);
+	transform-origin: 0% 0%;
+	text-align:center;
+	font-size:80vh;
+	/*position:relative;*/
+	top:0vh;
+	left:2.5em;
+	margin:0;
+	padding:0;
+
+}
+
+h1 span{
+	position:relative;
+}
+
+
+h1 span:before{
+	font-family:"sliced-top";
+	position:absolute;
+	left:0;
+}
+
+h1 span:after{
+	font-family:"sliced-bottom";
+	position:absolute;
+	left:0;
+}
+
+.char-01{
+	position:relative;
+}
+
+.char-01:before,
+.char-01:after{
+	content:"F";
+	left:0;
+	
+}
+
+.char-02:before,
+.char02:after{
+	content:"O";
+}
+
+.char-03:before,
+.char-03:after{
+	content:"R";
+}
+
+.char-04:before,
+.char-04:after{
+	content:"M";
+}

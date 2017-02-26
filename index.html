@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sliced | Investigation</title>
+		 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		 <!-- <link rel="stylesheet" href="style/sliced-01.css"> -->
+		 <link rel="stylesheet" href="style/sliced-02.css">
+	
+</head>
+<body>
+	<h1><span class="char-01 rotate-left">F</span><span class="char-02 right">O</span><span class="char-03 left bottom">R</span><span class="char-04 right bottom">M</span>
+
+	</h1>
+
+	<h2>+</h2>
+
+	<section class="description">
+		<p><strong>Sliced</strong> is the beginnings of a typographic investigation in a typeface built specifically to be torn apart by CSS. By utilizing the :before and :after pseudo selectors Sliced can load different elements of the letterform and be torn apart and re-constructed while maintaining semantic, searchable hypertext. The buttons below are toggling between stylesheets, leaving the markup intact.</p>
+		<div class="buttons">
+			<button id="css-01">01</button>
+			<button id="css-02">02</button>
+			<button id="css-03">03</button>
+			<button id="css-off">off</button>
+		</div>
+	</section>
+
+
+<script type="text/javascript">
+	$('span').click(function(){
+		$(this).toggleClass('half-size');
+	});
+
+	$('h2').click(function(){
+		$('span').toggleClass('clean');
+	});
+
+
+	$("#css-off").click(function() {
+	$("link[rel=stylesheet]").attr({href : "style/off.css"});
+	});
+
+	$("#css-01").click(function() {
+	$("link[rel=stylesheet]").attr({href : "style/sliced-01.css"});
+	});
+
+	$("#css-02").click(function() {
+	$("link[rel=stylesheet]").attr({href : "style/sliced-02.css"});
+	});
+
+	$("#css-03").click(function() {
+	$("link[rel=stylesheet]").attr({href : "style/sliced-03.css"});
+	});
+</script>
+</body>
+</html>

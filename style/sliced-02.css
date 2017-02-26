@@ -1,0 +1,164 @@
+@font-face{
+			font-family:"sliced-top";
+			src:url('../fonts/otf/slicing-test-top.otf');
+		}
+
+		@font-face{
+			font-family: "sliced-mid";
+			src:url('../fonts/otf/slicing-test-mid.otf');
+		}
+
+		@font-face{
+			font-family:"sliced-bottom";
+			src:url('../fonts/otf/slicing-test-bottom.otf');
+		}
+
+
+body{
+	background:red;
+}
+
+h1{
+	color:white;
+	font-family:"sliced-mid";
+	font-size:40vw;
+	text-align:center;
+	margin-top:0;
+}
+
+h1 span{
+	position:relative;
+
+}
+
+h1 span:before{
+	position:absolute;
+	font-family:"sliced-top";
+	-webkit-transition:all .5s cubic-bezier(.26,0,.03,.99);
+}
+
+h1 span:after{
+	position:absolute;
+	font-family:"sliced-bottom";
+	-webkit-transition:all .5s cubic-bezier(.26,0,.03,.99);
+	left:0;
+}
+
+/*------------------
+F
+--------------------*/
+.char-01:before{
+	content:"F";
+	font-family:"sliced-top";
+	margin-left:-0.25em;
+}
+
+.char-01:after{
+	content:"b";
+	font-family:"sliced-bottom";
+	/*left:0;*/
+	margin-left:-0.125em;
+	
+}
+
+.char-01:hover:before{
+	margin-left:0em;
+}
+
+.char-01:hover:after{
+	margin-left:0em;
+
+}
+
+/*------------------
+O
+--------------------*/
+.char-02:before{
+	content:"O";
+	margin-top:-0.25em;
+	margin-left:-0.05em;
+}
+
+.char-02:after{
+	content:"O";
+	margin-top:0.5em;
+	-webkit-transform:rotate(-90deg);
+}
+
+.char-02:hover:before{
+	margin-top:0em;
+	margin-left:0em;
+	
+}
+
+.char-02:hover:after{
+	margin-top:0em;
+	margin-left:0em;
+	-webkit-transform:rotate(0deg);
+}
+
+/*------------------
+R
+--------------------*/
+
+.char-03:before{
+	content:"R";
+	margin-left:0.12em;
+}
+
+.char-03:after{
+	content:"R";
+	margin-top:0.2em;
+}
+
+.char-03:hover:before{
+	margin-left:0em;
+}
+
+.char-03:hover:after{
+	margin-top:0em;
+
+}
+
+
+/*------------------
+M
+--------------------*/
+.char-04:before{
+	content:"M";
+	margin-left:0.25em;
+}
+
+.char-04:after{
+	content:"m";
+	margin-left:0.05em;
+}
+
+.char-04:hover:before{
+	margin-left:0;
+
+}
+
+.char-04:hover:after{
+	margin-left:0;
+	/*content:"M";*/
+}
+
+
+.description{
+	position:fixed;
+	z-index:2;
+	bottom:0;
+	padding:2em;
+}
+
+.description p{
+	font-family:menlo;
+	line-height:1.4em;
+}
+
+
+
+
+
+

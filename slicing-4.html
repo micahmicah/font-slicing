@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style type="text/css">
+		@font-face{
+			font-family:"sliced-top";
+			src:url('fonts/otf/slicing-test-top.otf');
+		}
+
+		@font-face{
+			font-family: "sliced-mid";
+			src:url('fonts/otf/slicing-test-mid.otf');
+		}
+
+		@font-face{
+			font-family:"sliced-bottom";
+			src:url('fonts/otf/slicing-test-bottom.otf');
+		}
+
+		body{
+			background:rgb(40,40,40);
+		}
+
+		h1{
+			color:rgb(210,210,210);
+			font-family:"sliced-mid";
+			font-size:250px;
+			font-weight:normal;
+			margin:0px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<h1><span class="char-01 rotate-left">F</span><span class="char-02 right">O</span><span class="char-03 left bottom">R</span><span class="char-04 right bottom rotate-right">M</span></h1>
+
+	<h2>+</h2>
+
+	<section class="description">
+		<p>Sliced is the beginnings of an experimental typeface that is built specifically to be torn part by CSS. By utilizing the :before and :after psudeo selectors sliced can load different elements of the letterform and be torn apart and re-constructed while maintaining semantic, machine readable markup.</p>
+	</section>
+
+
+<script type="text/javascript">
+	$('span').click(function(){
+		$(this).toggleClass('half-size');
+	});
+
+	$('h2').click(function(){
+		$('span').toggleClass('clean');
+	});
+
+</script>
+</body>
+</html>

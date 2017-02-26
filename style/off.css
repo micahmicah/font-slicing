@@ -1,0 +1,52 @@
+body{
+	/*background:red;*/
+}
+
+h1 {
+				font-size:150px;
+			}
+
+.description{
+			background:rgb(210,210,210);
+			max-width:30vw;
+			/*bottom:0;*/
+			position:absolute;
+			bottom:0vh;
+			left:35vw;
+			-webkit-transition:all 1s cubic-bezier(.26,0,.03,.99);
+		}
+
+		.description p{
+			color:rgb(40,40,40);
+			font-family:menlo;
+			padding:1em;
+			margin:0;
+			line-height:1.3em;
+		}
+
+
+.buttons{
+			padding-left:1em;
+			padding-bottom:1em;
+		}
+	
+	@media only screen and (max-width:800px){
+			.description{
+				max-width:100vw;
+				top:100vh;
+			}
+		}
+
+		@media only screen and (max-width:400px){
+			h1 {
+				font-size:150px;
+			}
+
+			h2{
+				font-size:130px;
+			}
+			.description{
+				max-width:75vw;
+				margin-left:10vw;
+			}
+		}
