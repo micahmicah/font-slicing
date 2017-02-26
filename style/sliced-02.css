@@ -44,20 +44,71 @@ h1 span:after{
 	left:0;
 }
 
+
+@keyframes shift-small{
+	0%{
+		margin-left:0em;
+	}
+
+	50%{
+		margin-left:0.125em;
+	}
+	75%{
+		margin-left:-0.05em;
+	}
+	100%{
+		margin-left:0em;
+	}
+}
+
+
+@keyframes shift-rotate{
+	from{
+		margin-top:0em;
+		-webkit-transform:rotate(0deg);
+	}	
+	to{
+		margin-top:0.5em;
+		-webkit-transform:rotate(-90deg);
+	}
+}
+
+@keyframes shift-up{
+	from{
+		margin-top:0em;
+	}
+	to{
+		margin-top:-0.25em;
+		margin-left:0.025em;
+	}
+}
+
+@keyframes shift-down{
+	from{
+		margin-top:0em;
+	}
+	to{
+		margin-top:0.25em;
+	}
+}
+
+
+
 /*------------------
 F
 --------------------*/
 .char-01:before{
-	content:"F";
+	content:"L";
 	font-family:"sliced-top";
-	margin-left:-0.25em;
+	-webkit-animation:shift-small 2.5s cubic-bezier(.26,0,.03,.99) infinite;
 }
 
 .char-01:after{
-	content:"b";
+	content:"L";
 	font-family:"sliced-bottom";
+	-webkit-animation:shift-small 1.5s cubic-bezier(.26,0,.03,.99) infinite;
 	/*left:0;*/
-	margin-left:-0.125em;
+	/*margin-left:-0.125em;*/
 	
 }
 
@@ -75,14 +126,13 @@ O
 --------------------*/
 .char-02:before{
 	content:"O";
-	margin-top:-0.25em;
-	margin-left:-0.05em;
+	-webkit-animation: shift-up 2s cubic-bezier(.26,0,.03,.99) infinite alternate;
 }
 
 .char-02:after{
 	content:"O";
-	margin-top:0.5em;
-	-webkit-transform:rotate(-90deg);
+	-webkit-animation: shift-rotate 2.3s cubic-bezier(.26,0,.03,.99) infinite alternate;
+
 }
 
 .char-02:hover:before{
@@ -102,13 +152,14 @@ R
 --------------------*/
 
 .char-03:before{
-	content:"R";
-	margin-left:0.12em;
+	content:"O";
+	-webkit-animation: shift-small 2s cubic-bezier(.26,0,.03,.99) infinite;
 }
 
 .char-03:after{
-	content:"R";
-	margin-top:0.2em;
+	content:"O";
+	-webkit-animation: shift-down 1s cubic-bezier(.26,0,.03,.99) infinite alternate;
+
 }
 
 .char-03:hover:before{
@@ -120,18 +171,18 @@ R
 
 }
 
-
 /*------------------
 M
 --------------------*/
 .char-04:before{
-	content:"M";
-	margin-left:0.25em;
+	content:"P";
+	-webkit-animation: shift-small 3s cubic-bezier(.26,0,.03,.99) infinite;
 }
 
 .char-04:after{
-	content:"m";
-	margin-left:0.05em;
+	content:"P";
+	-webkit-animation: shift-small 5s cubic-bezier(.26,0,.03,.99) infinite;
+	/*margin-left:0.05em;*/
 }
 
 .char-04:hover:before{
@@ -140,7 +191,7 @@ M
 }
 
 .char-04:hover:after{
-	margin-left:0;
+	/*margin-left:0;*/
 	/*content:"M";*/
 }
 
@@ -156,7 +207,6 @@ M
 	font-family:menlo;
 	line-height:1.4em;
 }
-
 
 
 

@@ -39,7 +39,7 @@
 
 		/*
 		------------------------------------
-		F
+		L
 		------------------------------------
 		*/
 
@@ -50,7 +50,7 @@
 		}
 
 		.char-01:before{
-			content:"F";
+			content:"L";
 			font-family:"sliced-top";
 			left:-1.3em;
 			top:2em;
@@ -59,7 +59,7 @@
 		}
 
 		.char-01:after{
-			content:"F";
+			content:"L";
 			font-family:"sliced-bottom";
 			left:0.4em;
 			top:0.75em;
@@ -133,7 +133,7 @@
 
 		/*
 		------------------------------------
-		R
+		O
 		------------------------------------
 		*/
 
@@ -142,7 +142,7 @@
 		}
 
 		.char-03:before{
-			content:"R";
+			content:"O";
 			font-family:"sliced-top";
 			top:-0.7em;
 			left:2em;
@@ -154,7 +154,7 @@
 		}
 
 		.char-03:after{
-			content:"R";
+			content:"O";
 			font-family:"sliced-bottom";
 			left:0.5em;
 			top:0.25em;
@@ -183,7 +183,7 @@
 		}
 
 		.char-04:before{
-			content:"M";
+			content:"P";
 			font-family:"sliced-top";
 			left:-0.5em;
 			top:0em;
@@ -194,7 +194,7 @@
 		}
 
 		.char-04:after{
-			content:"M";
+			content:"P";
 			font-family:"sliced-bottom";
 			left:-1em;
 			top:0.5em;
